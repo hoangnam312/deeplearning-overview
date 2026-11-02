@@ -1,0 +1,10 @@
+{
+  "slug": "chon-ham-kich-hoat",
+  "title": "Chọn hàm kích hoạt",
+  "diagramId": "chon-ham-kich-hoat",
+  "relatedSlugs": [
+    "kiem-tra-anh",
+    "chon-so-layer",
+    "chon-neuron-filter"
+  ]
+}

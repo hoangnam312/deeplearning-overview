@@ -1,0 +1,38 @@
+{
+  "name": "deeplearning-overview",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "check:content": "node --import tsx scripts/check-content.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "node --import tsx tests/content.test.ts",
+    "test:migration": "node --import tsx tests/migration.test.ts",
+    "test:e2e": "playwright test",
+    "prebuild": "npm run check:content",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "16.4.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "mermaid": "^12.2.0",
+    "react-zoom-pan-pinch": "^3.7.0",
+    "lucide-react": "^0.577.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.9.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.4.3",
+    "tsx": "^4.20.0",
+    "@playwright/test": "^1.58.0"
+  }
+}

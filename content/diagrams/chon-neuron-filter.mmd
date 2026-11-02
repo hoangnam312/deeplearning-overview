@@ -1,0 +1,16 @@
+flowchart TD
+    A["Xác định kích thước dữ liệu và độ phức tạp"] --> B["Chọn số filter ban đầu"]
+    B --> C["Ví dụ: 32 → 64 → 128"]
+    C --> D["Feature map nhỏ dần"]
+    D --> E["Số kênh đặc trưng tăng dần"]
+    E --> F["Huấn luyện mô hình"]
+    F --> G{"Mô hình có đủ năng lực không?"}
+    G -->|Không đủ - Underfitting| H["Tăng số filter hoặc neuron"]
+    H --> I["Ví dụ: 32 → 64 thành 64 → 128"]
+    I --> F
+    G -->|Quá lớn - Overfitting| J["Giảm số filter hoặc neuron"]
+    J --> K["Thêm Dropout hoặc Regularization"]
+    K --> F
+    G -->|Phù hợp| L["Giữ cấu hình hiện tại"]
+    L --> M["Lớp cuối có số neuron theo số lớp"]
+    M --> N["Ví dụ: 10 lớp thì dùng Dense với 10 neuron"]

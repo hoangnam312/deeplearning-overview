@@ -1,0 +1,10 @@
+{
+  "slug": "kiem-tra-anh",
+  "title": "Kiểm tra kích thước ảnh và số kênh",
+  "diagramId": "kiem-tra-anh",
+  "relatedSlugs": [
+    "chon-so-layer",
+    "chon-neuron-filter",
+    "chon-ham-kich-hoat"
+  ]
+}

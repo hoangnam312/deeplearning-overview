@@ -1,0 +1,16 @@
+flowchart TD
+    A[Đánh giá độ phức tạp của bài toán] --> B{Bài toán đơn giản?}
+    B -->|Có| C[Bắt đầu với ít layer]
+    C --> D[Conv2D → Pooling → Conv2D]
+    B -->|Không| E[Bắt đầu với nhiều convolution block hơn]
+    E --> F[Conv2D → Pooling → Conv2D → Pooling → Conv2D]
+    D --> G[Huấn luyện mô hình]
+    F --> G
+    G --> H{Kết quả validation thế nào?}
+    H -->|Train thấp, validation thấp| I[Underfitting]
+    I --> J[Thêm layer hoặc tăng năng lực mô hình]
+    J --> G
+    H -->|Train cao, validation thấp| K[Overfitting]
+    K --> L[Giảm layer, dùng Dropout hoặc Augmentation]
+    L --> G
+    H -->|Train và validation đều tốt| M[Giữ kiến trúc và đánh giá trên Test set]

@@ -1,0 +1,37 @@
+flowchart TD
+    A[Nhận diện bài toán] --> B[Xác định Input và Output]
+    B --> C{Input là loại dữ liệu gì?}
+    C -->|Ảnh| D[Kiểm tra kích thước ảnh và số kênh]
+    C -->|Văn bản| E[Tokenize và biểu diễn thành vector]
+    C -->|Bảng dữ liệu| F[Xử lý các cột và giá trị thiếu]
+    C -->|Âm thanh hoặc chuỗi thời gian| G[Chuẩn hóa dữ liệu theo thời gian]
+    D --> H[Tiền xử lý dữ liệu]
+    E --> H
+    F --> H
+    G --> H
+    H --> I[Chia dữ liệu]
+    I --> I1[Training set]
+    I --> I2[Validation set]
+    I --> I3[Test set]
+    I1 --> J[Chọn mô hình phù hợp]
+    J --> J1[Chọn loại layer]
+    J --> J2[Chọn số layer]
+    J --> J3[Chọn số neuron hoặc filter]
+    J --> J4[Chọn hàm kích hoạt]
+    J1 --> K[Xây dựng mô hình]
+    J2 --> K
+    J3 --> K
+    J4 --> K
+    K --> L[Chọn loss function]
+    L --> M[Chọn optimizer và metric]
+    M --> N[Huấn luyện trên Training set]
+    N --> O[Đánh giá trên Validation set]
+    O --> P{Mô hình hoạt động tốt chưa?}
+    P -->|Chưa - Underfitting| Q[Tăng năng lực mô hình hoặc huấn luyện thêm]
+    Q --> K
+    P -->|Chưa - Overfitting| R[Regularization, Dropout, Data augmentation hoặc giảm độ phức tạp]
+    R --> K
+    P -->|Đạt yêu cầu| S[Đánh giá một lần trên Test set]
+    S --> T[Đưa Input mới vào mô hình]
+    T --> U[Model dự đoán]
+    U --> V[Output: lớp, xác suất hoặc giá trị dự đoán]

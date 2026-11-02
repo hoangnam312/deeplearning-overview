@@ -1,0 +1,13 @@
+flowchart TD
+    A[Nhận dạng loại dữ liệu] --> B{Dữ liệu là gì?}
+    B -->|Ảnh| C[Conv2D để trích xuất đặc trưng]
+    C --> D[Pooling để giảm kích thước]
+    D --> E{Cần chống overfitting?}
+    E -->|Có| F[Thêm Dropout hoặc Data Augmentation]
+    E -->|Không| G[Tiếp tục]
+    B -->|Văn bản hoặc chuỗi| H[Embedding, RNN, LSTM hoặc Transformer]
+    B -->|Dữ liệu bảng| I[Dense và các layer chuẩn hóa]
+    B -->|Âm thanh hoặc tín hiệu| J[Conv1D hoặc các layer xử lý chuỗi]
+    F --> K[Layer tóm tắt đặc trưng]
+    G --> K
+    K --> L[Dense để tạo output]

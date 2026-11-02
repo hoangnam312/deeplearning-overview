@@ -1,0 +1,42 @@
+{
+  "title": "Deep Learning Roadmap",
+  "overviewDiagramId": "tong-quan",
+  "postOrder": [
+    "kiem-tra-anh",
+    "chon-so-layer",
+    "chon-neuron-filter",
+    "chon-ham-kich-hoat"
+  ],
+  "diagrams": [
+    {
+      "id": "tong-quan",
+      "file": "tong-quan.mmd",
+      "nodeLinks": {
+        "D": "kiem-tra-anh",
+        "J2": "chon-so-layer",
+        "J3": "chon-neuron-filter",
+        "J4": "chon-ham-kich-hoat"
+      }
+    },
+    {
+      "id": "kiem-tra-anh",
+      "file": "kiem-tra-anh.mmd",
+      "nodeLinks": {}
+    },
+    {
+      "id": "chon-so-layer",
+      "file": "chon-so-layer.mmd",
+      "nodeLinks": {}
+    },
+    {
+      "id": "chon-neuron-filter",
+      "file": "chon-neuron-filter.mmd",
+      "nodeLinks": {}
+    },
+    {
+      "id": "chon-ham-kich-hoat",
+      "file": "chon-ham-kich-hoat.mmd",
+      "nodeLinks": {}
+    }
+  ]
+}

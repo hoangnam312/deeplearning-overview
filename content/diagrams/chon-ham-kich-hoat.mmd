@@ -1,0 +1,18 @@
+flowchart TD
+    A["Đang chọn activation function"] --> B{"Layer nằm ở đâu?"}
+    B -->|Hidden layer| C["Dùng ReLU"]
+    C --> D["Conv2D hoặc Dense ở giữa"]
+    B -->|Output layer| E{"Loại bài toán là gì?"}
+    E -->|Phân loại nhiều lớp| F["Dùng Softmax"]
+    F --> G["Dense với K output và Softmax"]
+    E -->|Phân loại nhị phân| H["Dùng Sigmoid"]
+    H --> I["Dense với 1 output và Sigmoid"]
+    E -->|Multi-label| J["Dùng Sigmoid cho từng lớp"]
+    J --> K["Dense với K output và Sigmoid"]
+    E -->|Hồi quy| L["Dùng Linear hoặc không dùng activation"]
+    L --> M["Dense với 1 output"]
+    D --> N["Chọn loss function tương ứng"]
+    G --> N
+    I --> N
+    K --> N
+    M --> N

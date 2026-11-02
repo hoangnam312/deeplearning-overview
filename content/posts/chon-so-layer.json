@@ -1,0 +1,10 @@
+{
+  "slug": "chon-so-layer",
+  "title": "Chọn số layer",
+  "diagramId": "chon-so-layer",
+  "relatedSlugs": [
+    "kiem-tra-anh",
+    "chon-neuron-filter",
+    "chon-ham-kich-hoat"
+  ]
+}

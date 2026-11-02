@@ -1,0 +1,10 @@
+{
+  "slug": "chon-neuron-filter",
+  "title": "Chọn số neuron hoặc filter",
+  "diagramId": "chon-neuron-filter",
+  "relatedSlugs": [
+    "kiem-tra-anh",
+    "chon-so-layer",
+    "chon-ham-kich-hoat"
+  ]
+}
